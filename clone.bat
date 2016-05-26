@@ -24,11 +24,13 @@ mkdir include\rapidxml
 xcopy /r /y rapidxml\*.hpp include\rapidxml\
 rd /s /q rapidxml
 git clone https://code.csdn.net/Tencent/rapidjson.git
-xcopy /r /e /y rapidjson\include\rapidjson include\
+xcopy /r /e /y rapidjson\include include\
 rd /s /q rapidjson
 git clone https://github.com/curl/curl.git
 cd curl\winbuild
 nmake /f Makefile.vc mode=static VC=12 ENABLE_WINSSL=yes MACHINE=x64
-xcopy /r /e /y curl\builds\libcurl-vc12-x64-release-static-ipv6-sspi-winssl\include\ include\
-xcopy /r /y curl\builds\libcurl-vc12-x64-release-static-ipv6-sspi-winssl\libcurl_a.lib lib\
+cd ..\..
+xcopy /r /e /y curl\builds\libcurl-vc12-x64-release-static-ipv6-sspi-winssl\include include\
+xcopy /r /y curl\builds\libcurl-vc12-x64-release-static-ipv6-sspi-winssl\lib\libcurl_a.lib lib\
+rd /s /q curl
 @echo on
