@@ -6,3 +6,4 @@ cd LuaJIT-2.1.0-beta2
 git clone https://github.com/valnoel/rapidxml.git
 git clone git://code.csdn.net/Tencent/rapidjson.git
 git clone https://github.com/curl/curl.git
+git clone https://github.com/danoli3/ofxiOSBoost.git
