@@ -1,4 +1,6 @@
 #!/bin/sh
-./luajit/luajit.sh
-./rapidxml/rapidxml.sh
-./rapidjson/rapidjson.sh
+cd ..
+./tools/luajit/luajit.sh
+./tools/rapidxml/rapidxml.sh
+./tools/rapidjson/rapidjson.sh
+./tools/boost/boost.bat

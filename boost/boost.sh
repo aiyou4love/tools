@@ -1,20 +1,12 @@
 #!/bin/sh
-curl -o LuaJIT-2.1.0-beta2.tar.gz http://luajit.org/download/LuaJIT-2.1.0-beta2.tar.gz
-tar -xf LuaJIT-2.1.0-beta2.tar.gz
-rm -rf LuaJIT-2.1.0-beta2.tar.gz
-cd LuaJIT-2.1.0-beta2
-make
+curl -o boost_1_61_0.tar.bz2 http://pilotfiber.dl.sourceforge.net/project/boost/boost/1.61.0/boost_1_61_0.tar.bz2
+tar --bzip2 -xf boost_1_61_0.tar.bz2
+rm -rf boost_1_61_0.tar.bz2
+cd boost_1_61_0
+./bootstrap.sh
+./b2 toolset=darwin address-model=64 link=static runtime-link=static stage
 cd ..
-mkdir include
-mkdir lib
-mkdir bin
-mkdir include/lua
-cp LuaJIT-2.1.0-beta2/src/luaconf.h include/lua/
-cp LuaJIT-2.1.0-beta2/src/lua.h include/lua/
-cp LuaJIT-2.1.0-beta2/src/lauxlib.h include/lua/
-cp LuaJIT-2.1.0-beta2/src/lualib.h include/lua/
-cp LuaJIT-2.1.0-beta2/src/luajit.h include/lua/
-cp LuaJIT-2.1.0-beta2/src/lua.hpp include/lua/
-cp LuaJIT-2.1.0-beta2/src/libluajit.a lib/
-cp LuaJIT-2.1.0-beta2/src/libluajit.so bin/
-rm -r LuaJIT-2.1.0-beta2
+cp boost_1_61_0/stage/lib/*.a lib/
+cp -rf boost_1_61_0/boost include/
+rm -rf boost_1_61_0
+@echo on
