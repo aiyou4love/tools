@@ -10,4 +10,5 @@ mkdir include\boost
 xcopy /r /y boost_1_61_0\stage\lib\*.lib lib\
 xcopy /r /e /y boost_1_61_0\boost include\boost\
 rd /s /q boost_1_61_0
+rd /s /q boost_1_61_0
 @echo on
