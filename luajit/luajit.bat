@@ -1,7 +1,7 @@
 @echo off
 tools\curl.exe -o LuaJIT-2.1.0-beta2.zip http://luajit.org/download/LuaJIT-2.1.0-beta2.zip
 tools\7z.exe x LuaJIT-2.1.0-beta2.zip
-del /q /s /f LuaJIT-2.1.0-beta2.zip
+::del /q /s /f LuaJIT-2.1.0-beta2.zip
 cd LuaJIT-2.1.0-beta2/src
 call msvcbuild.bat
 cd ../..

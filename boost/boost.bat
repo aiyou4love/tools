@@ -1,7 +1,7 @@
 @echo off
 tools\curl.exe -o boost_1_61_0.7z http://nchc.dl.sourceforge.net/project/boost/boost/1.61.0/boost_1_61_0.7z
 tools\7z.exe x boost_1_61_0.7z
-del /q /s /f boost_1_61_0.7z
+::del /q /s /f boost_1_61_0.7z
 cd boost_1_61_0
 call bootstrap.bat
 b2 toolset=msvc address-model=64 stage
