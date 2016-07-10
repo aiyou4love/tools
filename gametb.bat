@@ -1,9 +1,5 @@
 @echo off
-cd ../autoup
-if not exist build (
-	mkdir build
-)
-cd build
+cd ../bin
 if not exist asset (
 	mkdir asset
 )
@@ -13,6 +9,6 @@ if not exist update (
 if not exist storage (
 	mkdir storage
 )
-cd ../../
-command\consoleui\bin\Release\consoleui.exe -t gameTb autoup/build/asset
+cd ../
+command\consoleui\bin\Release\consoleui.exe -t gameTb bin/asset
 @echo on
