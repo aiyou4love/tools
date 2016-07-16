@@ -12,6 +12,7 @@ if not exist client (
 	cd asset
 	mkdir table
 	mkdir plugin
+	mkdir ui
 	cd ../../
 	windows\consoleui\consoleui.exe -t gameTb/client client/asset/table
 	cd common
