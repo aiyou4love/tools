@@ -1,4 +1,4 @@
-@echo off
+::@echo off
 cd ..
 if not exist client (
 	mkdir client
@@ -12,7 +12,7 @@ if not exist client (
 	cd asset
 	mkdir table
 	mkdir plugin
+	cd ../../
+	windows\consoleui\consoleui.exe -t gameTb/client client/asset/table
 )
-cd ../../
-windows\consoleui\bin\consoleui.exe -t gameTb/client client/asset/table
-@echo on
+::@echo on
