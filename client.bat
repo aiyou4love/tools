@@ -13,8 +13,11 @@ if not exist client (
 	mkdir table
 	mkdir plugin
 	mkdir ui
+	mkdir lua
 	cd ../../
 	windows\consoleui\consoleui.exe -t gameTb/client client/asset/table
+	xcopy /R /Y script\client\*.* client\asset\lua\
+	xcopy /R /Y /S gameui\* client\asset\ui\
 	cd common
 	call build.bat
 	cd ..
