@@ -11,11 +11,13 @@ if not exist client (
 	mkdir log
 	cd asset
 	mkdir table
+	mkdir config
 	mkdir plugin
 	mkdir ui
 	mkdir lua
 	cd ../../
-	windows\consoleui\consoleui.exe -t gameTb/client client/asset/table
+	windows\consoleui\consoleui.exe -t gameTb/client/setting client/asset/config
+	windows\consoleui\consoleui.exe -t gameTb/client/table client/asset/table
 	xcopy /R /Y script\client\*.* client\asset\lua\
 	xcopy /R /Y /S gameui\* client\asset\ui\
 	cd common
